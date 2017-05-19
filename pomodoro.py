@@ -35,7 +35,7 @@ while True:
     cmd = "play -qn synth 3 sine 1000"
     call(cmd.split()) 
 
-    for goElapsed in philtime.timesource(10):
+    for goElapsed in philtime.timesource(5):
         sys.stdout.write(progress(goElapsed)  + '\r')
         sys.stdout.flush()
     sys.stdout.write(progress(goElapsed) + '\n' + '\r')
