@@ -32,7 +32,8 @@ while True:
     sys.stdout.write(progress(goElapsed) + '\n' + '\r')
     sys.stdout.flush()
     print "end of the pomoderm"
-    call(['beep','-f','500','-l','300','-d','400','-r','30']) 
+    cmd = "play -qn synth 3 sine 1000"
+    call(cmd.split()) 
 
     for goElapsed in philtime.timesource(10):
         sys.stdout.write(progress(goElapsed)  + '\r')
@@ -40,6 +41,6 @@ while True:
     sys.stdout.write(progress(goElapsed) + '\n' + '\r')
     sys.stdout.flush()
     print "end of the rest period"
-    call(['beep','-f','2000','-l','100','-d','100','-r','40']) 
-  
+    cmd = "play -qn synth 10 sine 750"
+    call(cmd.split())
 
